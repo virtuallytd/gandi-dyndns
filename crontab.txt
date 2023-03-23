@@ -1,0 +1,1 @@
+*/30 * * * * /bin/sh /usr/local/bin/update_dns.sh

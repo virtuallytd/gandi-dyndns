@@ -1,0 +1,12 @@
+version: "3.9"
+services:
+  gandi-dyndns:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./crontab.txt:/etc/crontabs/root
+      - ./logs:/var/log
+    env_file:
+      - .env
+    command: ["crond", "-f"]
