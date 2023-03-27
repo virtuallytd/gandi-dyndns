@@ -7,7 +7,7 @@ LOG_FILE="/var/log/update_dns.log"
 echo "$(date): Starting container" >> "$LOG_FILE"
 
 # Run the update_dns script once
-/usr/local/bin/update_dns.sh
+/bin/sh /usr/local/bin/update_dns.sh
 
 # Start the cron daemon
 crond -L /var/log/cron.log
